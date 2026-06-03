@@ -442,3 +442,30 @@ footer {
     background-color: #1ea952;
     transform: scale(1.03);
 }
+/* --- ADAPTACIÓN PARA PANTALLAS CHICAS (CELULARES) --- */
+@media (max-width: 768px) {
+    /* Selecciona el contenedor de tus enlaces del menú */
+    nav, .nav-container, .menu, .nav-links { 
+        display: flex !important;
+        flex-direction: row; /* Los mantiene en fila pero con truco */
+        flex-wrap: wrap;    /* Si no caben, los manda para abajo ordenados */
+        justify-content: center;
+        gap: 10px 15px;     /* Separa los botones para que no se peguen */
+        padding: 10px;
+    }
+
+    /* Le da estilo a cada botón en el cel para que se vean parejitos */
+    nav a, .menu a, .nav-links a {
+        font-size: 0.9rem !important; /* Hace la letra un chiringuito más chica para que quepa mejor */
+        padding: 6px 12px !important;
+        background-color: #f5f5f5;    /* Les da un fondo gris claro sutil tipo botón */
+        border-radius: 5px;
+        text-decoration: none;
+        color: #333333;
+        transition: background-color 0.2s;
+    }
+
+    nav a:hover, .menu a:hover {
+        background-color: #ffcc00;    /* Cambia a oro al tocarlos */
+    }
+}
